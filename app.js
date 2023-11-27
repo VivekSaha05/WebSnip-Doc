@@ -23,4 +23,14 @@ function copyToClipboard(button) {
     // Optionally, provide some visual feedback to the user
     alert('Code copied to clipboard!');
   }
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var menuButton = document.querySelector('.menu-button');
+    var menuList = document.querySelector('ul');
+
+    menuButton.addEventListener('click', function () {
+        menuList.classList.toggle('hide');
+    });
+});
   

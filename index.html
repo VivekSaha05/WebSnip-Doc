@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Your Code Snippet Website</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Your Code Snippet Website</title>
 </head>
 <body>
-
-  <header>
+<header>
     <nav>
-      <div class="logo">WebSnip</div>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/snippet.html">Snippets</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+        <a href="/index.html"><div class="logo">WebSnip</div></a>
+        <div class="menu-button">&#9776;</div>
+        <ul class="hide">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/snippet.html">Snippets</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <main>
-
-    <section id="home" class="section home-section">
-      <div class="logo-container">
-        <img src="websnip-logo.png" alt="Websnip Logo" class="big-logo">
-      </div>
-      <div class="description">
-        <h2>Welcome to Websnip</h2>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Discover, Learn, Share</h1>
         <p>
-          Explore a collection of code snippets for various programming languages.
+            Unlock the power of bite-sized knowledge with Snippets. Dive into a
+            world of concise and insightful content curated just for you.
         </p>
+        <a href="#explore" class="cta-button">Explore Snippets</a>
+    </div>
+</section>
+
+<main>
+    <section id="features" class="features-section">
+      <div class="card">
+        <img
+          src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg"
+          alt="Card Image 1"
+        />
+        <h2>React</h2>
+        <button class="card-button">Explore Snippets</button>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://colorlib.com/wp/wp-content/uploads/sites/2/nodejs-frameworks.png"
+          alt="Card Image 2"
+        />
+        <h2>Node Js</h2>
+        <button class="card-button">Explore Snippets</button>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://activewizards.com//content/image-cache/blog/Practical_MongoDB_in_10_minutes/awbl-2.bf2e2403.jpg"
+          alt="Card Image 3"
+        />
+        <h2>Mongo DB</h2>
+        <button class="card-button">Explore Snippets</button>
       </div>
     </section>
-
-    <!-- Add other sections (About, Snippets, Contact) as needed -->
-
-  </main>
-
-
-  <!-- ... Your existing HTML content ... -->
+</main>
 
 <footer>
-    <div class="footer-container">
-      <div class="quick-links">
-        <h3>Quick Links</h3>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/snippet.html">Snippets</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="social-media">
-        <h3>Follow Us</h3>
-        <!-- Add your social media icons or links here -->
-      </div>
-    </div>
     <div class="copyright">
-      <p>&copy; 2023 Your Code Snippet Website. All rights reserved.</p>
+        <p>&copy; 2023 Your Code Snippet Website. All rights reserved.</p>
     </div>
-  </footer>
+</footer>
 
-  <script src="app.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>

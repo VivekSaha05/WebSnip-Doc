@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="/index.html"><div class="logo">WebSnip</div></a>
+      <div class="menu-button">&#9776;</div>
+      <ul class="hide">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/snippet.html">Snippets</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
     
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="mx-auto mb-10 lg:max-w-xl sm:text-center">
@@ -134,5 +147,12 @@
         </div>
       </div>
 
+      <footer>
+        <div class="copyright">
+          <p>&copy; 2023 Your Code Snippet Website. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <script src="/app.js"></script>
 </body>
 </html>

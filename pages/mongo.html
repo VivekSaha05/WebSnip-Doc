@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <title>Mongo Docs</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/index.html">
+        <div class="logo">WebSnip</div>
+      </a>
+      <div class="menu-button">&#9776;</div>
+      <ul class="hide">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/snippet.html">Snippets</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" style="text-align: center;" class="section">
+      <h2 >Mongo and Mongoose Snippets</h2>
+      <p>
+        Explore a collection of code snippets for various programming
+        languages.
+      </p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>How to Use?</h2>
+      <p>
+        Just Install Our extension in your VSC and type the prefix in the file as per the module
+      </p>
+    </section>
+
+    <section id="snippets" class="section">
+      <h2>Featured Snippets</h2>
+
+      <div class="snippet">
+        <h3>Connect To DataBase</h3>
+        <h4>prefix: "conntodb"</h4>
+        <h4>description: "Connect to MongoDB using Mongoose"</h4>
+        <div class="code-container">
+          <pre>
+              <code id="codeSnippet1">
+                "// Importing mongoose",
+                "",
+                "const mongoose = require('mongoose');",
+                "",
+                "// creating a function for conencting to database and exporting it",
+                "// In your environment file define the database uri as DBURI",
+                "",
+                "exports.connectToDB = () => {",
+                "  mongoose.connect(`${process.env.DBURI}`).then(() => {",
+                "    console.log('Connected to the database');",
+                "  }).catch((err) => console.log('Some error has occurred!'));",
+                "};",
+                "",
+                "// Now you can require the file and call the function. Happy Hacking!!!
+              </code>
+            </pre>
+          <button onclick="copyToClipboard(this)" data-snippet-id="codeSnippet1">
+            Copy
+          </button
+        </div>
+      </div>
+
+      <div class="snippet">
+        <h3>Mongoose User Model</h3>
+        <h4>prefix: "usermodel"</h4>
+        <h4>description: "Creates a Mongoose model for a user"</h4>
+        <div class="code-container">
+          <pre>
+              <code id="codeSnippet2">
+                "// Importing the required modules",
+                "const mongoose = require(\"mongoose\");",
+                "",
+                "// Defining a schema for the 'users' model",
+                "const userSchema = new mongoose.Schema(",
+                "  {",
+                "    firstName: {",
+                "      type: String,",
+                "      required: true,",
+                "    },",
+                "    lastName: {",
+                "      type: String,",
+                "      required: true,",
+                "    },",
+                "    password: {",
+                "      type: String,",
+                "      required: true,",
+                "    },",
+                "    email: {",
+                "      type: String,",
+                "      required: true,",
+                "    },",
+                "    mobile: {",
+                "      type: String,",
+                "    },",
+                "    address: {",
+                "      type: String,",
+                "      required: true,",
+                "    },",
+                "    // Add or remove fields as needed for your application",
+                "  },",
+                "  { timestamps: true } // Adding timestamps",
+                ");",
+                "",
+                "// Converting the schema into a model and exporting it",
+                "module.exports = mongoose.model(\"users\", userSchema);"
+              </code>
+            </pre>
+          <button onclick="copyToClipboard(this)" data-snippet-id="codeSnippet2">
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- Add more snippets as needed -->
+    </section>
+
+    <section id="contact" class="section" >
+      <h2>Mistake found !!!</h2>
+      <p>Reach out to us if you have found any mistake in the sudeocode.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      <p>&copy; WebSnip | 2023</p>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+
+</html>

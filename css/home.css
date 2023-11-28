@@ -67,6 +67,7 @@ main {
     width: 100%; /* Set the width to 100% */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     background-size: contain;
+    isolation: isolate;
 }
 
 .hero-content {

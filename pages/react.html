@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <title>React Docs</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/index.html">
+        <div class="logo">WebSnip</div>
+      </a>
+      <div class="menu-button">&#9776;</div>
+      <ul class="hide">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/snippet.html">Snippets</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" style="text-align: center;" class="section">
+      <h2 >React JS and Snippets</h2>
+      <p>
+        Explore a collection of code snippets for various programming
+        languages.
+      </p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>How to Use?</h2>
+      <p>
+        Just Install Our extension in your VSC and type the prefix in the file as per the module
+      </p>
+    </section>
+
+    <section id="snippets" class="section">
+      <h2>Featured Snippets</h2>
+
+      <div class="snippet">
+        <h3>Intialize Express-React Server</h3>
+        <h4>prefix: "reactinitserver"</h4>
+        <h4>description: "Initialize an Express server for React JS"</h4>
+        <div class="code-container">
+          <pre>
+              <code id="codeSnippet1">
+                "// Importing required modules",
+                "const express = require('express');",
+                "const app = express();",
+                "const path = require('path');",
+                "const cors = require('cors');",
+                "const bodyparser = require('body-parser');",
+                "",
+                "// Initializing the environment variables",
+                "require('dotenv').config();",
+                "",
+                "// Connecting to the database",
+                "require('./config/connectDB').connectToDB();",
+                "",
+                "// Adding the middlewares",
+                "app.use(express.json());",
+                "app.use(bodyparser.urlencoded({ extended: false }));",
+                "",
+                "// Serving up the static files",
+                "app.use(express.static(path.join(__dirname, 'public')));",
+                "",
+                "// Setting up cors for React (open for all ports, adjust as needed)",
+                "app.use(cors());",
+                "",
+                "// Setting up the routes",
+                "const routes = require('./routes/routes');",
+                "app.use('/', routes);",
+                "",
+                "// Listening on the port (define PORT in the env file)",
+                "app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));",
+                "",
+                "// Your server is ready, Happy Hacking!!!"
+              </code>
+            </pre>
+          <button onclick="copyToClipboard(this)" data-snippet-id="codeSnippet1">
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <div class="snippet">
+        <h3>Express Router</h3>
+        <h4>prefix: "expressrouter"</h4>
+        <h4>description: "Creates an Express router object"</h4>
+        <div class="code-container">
+          <pre>
+              <code id="codeSnippet2">
+                "// Importing the Express module and creating a router object",
+                "const router = require(\"express\").Router();",
+                "",
+                "// Add your routes below this comment",
+                "",
+                "// Example route",
+                "router.get(\"/\", (req, res) => {",
+                "  res.send(\"Hello, Express!\");",
+                "});",
+                "",
+                "// Exporting the router object",
+                "module.exports = router;"
+              ],
+              "description": "Creates an Express router object"
+              </code>
+            </pre>
+          <button onclick="copyToClipboard(this)" data-snippet-id="codeSnippet2">
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- Add more snippets as needed -->
+    </section>
+
+    <section id="contact" class="section" >
+      <h2>Mistake found !!!</h2>
+      <p>Reach out to us if you have found any mistake in the sudeocode.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      <p>&copy; WebSnip | 2023</p>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+
+</html>
